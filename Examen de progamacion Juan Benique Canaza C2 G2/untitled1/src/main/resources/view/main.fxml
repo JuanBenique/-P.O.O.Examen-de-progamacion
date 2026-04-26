@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="pe.edu.upeu.controller.MainController">
+
+    <TextField fx:id="txtNombre" promptText="Nombre completo"/>
+    <TextField fx:id="txtCurp" promptText="CURP"/>
+    <DatePicker fx:id="dateNacimiento"/>
+    <TextField fx:id="txtDomicilio" promptText="Domicilio"/>
+
+    <ComboBox fx:id="comboEstadoCivil" promptText="Estado civil"/>
+
+    <HBox spacing="10">
+        <Button text="Agregar" onAction="#agregar"/>
+        <Button text="Actualizar" onAction="#actualizar"/>
+        <Button text="Eliminar" onAction="#eliminar"/>
+    </HBox>
+
+    <TableView fx:id="tabla">
+        <columns>
+            <TableColumn fx:id="colNombre" text="Nombre"/>
+            <TableColumn fx:id="colCurp" text="CURP"/>
+            <TableColumn fx:id="colFecha" text="Nacimiento"/>
+            <TableColumn fx:id="colDomicilio" text="Domicilio"/>
+            <TableColumn fx:id="colEstado" text="Estado Civil"/>
+        </columns>
+    </TableView>
+
+</VBox>
