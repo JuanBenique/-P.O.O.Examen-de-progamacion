@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" style="-fx-padding: 20;" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="pe.edu.upeu.controller.ClienteController">
+
+    <Label text="Gestión de Clientes" style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+
+    <GridPane hgap="10" vgap="10">
+        <Label text="DNI:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="txtDni" promptText="Ej: 12345678" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="txtNombre" promptText="Nombre completo" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Label text="Dirección:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="txtDireccion" promptText="Dirección" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <Label text="Celular:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <TextField fx:id="txtCelular" promptText="Ej: 987654321" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    </GridPane>
+
+    <HBox spacing="10">
+        <Button text="Guardar" onAction="#guardar" style="-fx-background-color: #2196F3; -fx-text-fill: white;"/>
+        <Button text="Eliminar" onAction="#eliminar" style="-fx-background-color: #f44336; -fx-text-fill: white;"/>
+        <Button text="Limpiar" onAction="#limpiar"/>
+    </HBox>
+
+    <TableView fx:id="tblCliente" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colDni" text="DNI" prefWidth="100"/>
+            <TableColumn fx:id="colNombre" text="Nombre" prefWidth="200"/>
+            <TableColumn fx:id="colDireccion" text="Dirección" prefWidth="200"/>
+            <TableColumn fx:id="colCelular" text="Celular" prefWidth="120"/>
+        </columns>
+    </TableView>
+</VBox>
+

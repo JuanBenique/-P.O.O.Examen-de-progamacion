@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" style="-fx-padding: 20;" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="pe.edu.upeu.controller.ProductoController">
+
+    <Label text="Gestión de Productos (Polos)" style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+
+    <GridPane hgap="10" vgap="10">
+        <Label text="ID Producto:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="txtIdProducto" promptText="Ej: P01" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="txtNombre" promptText="Ej: Polo Basico" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Label text="Precio Unitario:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="txtPreUnitario" promptText="Ej: 25.00" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <Label text="Porc. Utilidad:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <TextField fx:id="txtPorceUtil" promptText="Ej: 0.20" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+        <Label text="Talla:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+        <TextField fx:id="txtTalla" promptText="Ej: M, L, XL" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+        <Label text="Color:" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+        <TextField fx:id="txtColor" promptText="Ej: Blanco" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+        <Label text="Stock:" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+        <TextField fx:id="txtStock" promptText="Ej: 50" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+
+        <Label text="Categoria:" GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+        <ComboBox fx:id="cmbCategoria" prefWidth="200" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+    </GridPane>
+
+    <HBox spacing="10">
+        <Button text="Guardar" onAction="#guardar" style="-fx-background-color: #2196F3; -fx-text-fill: white;"/>
+        <Button text="Eliminar" onAction="#eliminar" style="-fx-background-color: #f44336; -fx-text-fill: white;"/>
+        <Button text="Limpiar" onAction="#limpiar"/>
+    </HBox>
+
+    <TableView fx:id="tblProducto" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colIdProducto" text="ID" prefWidth="70"/>
+            <TableColumn fx:id="colNombre" text="Nombre" prefWidth="150"/>
+            <TableColumn fx:id="colPreUnitario" text="Precio" prefWidth="80"/>
+            <TableColumn fx:id="colPorceUtil" text="Porc. Util." prefWidth="70"/>
+            <TableColumn fx:id="colTalla" text="Talla" prefWidth="60"/>
+            <TableColumn fx:id="colColor" text="Color" prefWidth="80"/>
+            <TableColumn fx:id="colStock" text="Stock" prefWidth="60"/>
+            <TableColumn fx:id="colCategoria" text="Categoria" prefWidth="100"/>
+        </columns>
+    </TableView>
+</VBox>
